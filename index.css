@@ -1,0 +1,543 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root { 
+    --side-bar:#17224D;
+    --text-color:#f5fafa;
+    --color-icons:#007FFF;
+    --color-dish1:#17e9e1;
+    --color-dish2:#FBC233;
+    --color-white1:#f8f8f2;
+    --color-white2:#e3e6e7;
+    --color-white3:#d1dce0;
+    --box-shadow:0.5rem 1rem rgba(0,0,0,.1);
+    --border:.1rem solid rgba(0,0,0,.2);
+}
+
+body {
+    font-family: Comfortaa, cursive;
+    min-height: 100vh;
+    background: var(--color-white1);
+}
+
+.sidebar{
+    position: fixed;
+    top: 20px;
+    left: 0px;
+    bottom: 20px;
+    width: .7rem;
+    border-radius: 1rem;
+    background-color: var(--side-bar);
+    transition:  .15s;
+    overflow-y: hidden;
+    box-sizing: initial;
+    overflow-x: hidden;
+    z-index: 9999;
+    display: block;
+}
+
+.sidebar.active{
+    width: 15rem;
+}
+
+.sidebar ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 2rem;
+    display: block;
+    width: 100%;
+    height: 100vh;
+}
+
+.sidebar ul li {
+    position: relative;
+    line-height: 3rem;
+    width: 100%;
+    list-style-type: none;
+
+}
+
+.sidebar ul li.active { 
+    background-color: var(--color-white3);
+    border-top-left-radius:1rem;
+    border-bottom-right-radius:1rem;
+}
+
+.sidebar ul li.active a{
+    color: var(--side-bar);
+}
+
+
+.sidebar ul li a {
+    position: relative;
+    display: flex;
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: var(--color-white3);
+    margin-left: .5rem;
+    margin-top: 3rem;
+}
+
+.sidebar ul li a span{
+    margin-left: 1rem;
+}
+
+.sidebar ul li a span:hover {
+    width: 100%;
+    height: 5%;
+    transition: .15s;
+    margin-left: 1.5rem;
+}
+
+.toggle {
+    position: fixed;
+    top: 20px;
+    left: 0px;
+    background-color: var(--side-bar);
+    width: 50px;
+    height: 50px;
+    border-radius: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+}
+
+.toggle.active { 
+    background-color: #007FFF;
+    transition: .15s;
+}
+
+.toggle i {
+    position: absolute;
+    color: var(--color-white3);
+    font-size: 1rem;
+    display: none;
+    transition: 1s linear ease-in-out;
+}
+
+.toggle i#open,
+.toggle.active i#close{
+    display: block;
+}
+
+.toggle.active i#open {
+    display: none;
+    
+}
+
+.container {
+    position: relative;
+    margin: 2rem auto;
+    box-sizing: var(--box-shadow);
+    border: var(--border);
+    width: 1100px;
+    border-radius: 1rem;
+    
+}
+
+.container h1{
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 5rem;
+}
+
+.container h2{
+    text-align: center;
+    margin-bottom: .3rem;
+}
+
+
+.toggleArrow{
+    position: relative;
+    width: 40px;
+    height: 30px;
+    background-color: var(--side-bar);
+    cursor: pointer;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-white3);
+}
+
+.toggleArrow.active{
+    background-color: var(--color-icons);
+    transition: 1s;
+}
+
+.toggleArrow i {
+    position: absolute;
+    display: none;
+    transition: 1s;
+}
+
+.toggleArrow i#arrowup,
+.toggleArrow.active i#arrowdown {
+    display: block;
+}
+
+.toggleArrow.active i#arrowup {
+    display: none;
+}
+
+
+.toggleArrow2 {
+    position: relative;
+    width: 40px;
+    height: 30px;
+    background-color: var(--side-bar);
+    cursor: pointer;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-white3);
+}
+
+.toggleArrow2.active{
+    background-color: var(--color-icons);
+    transition: 1s;
+}
+
+.toggleArrow2 i {
+    position: absolute;
+    display: none;
+    transition: 1s;
+}
+
+.toggleArrow2 i#arrowup1,
+.toggleArrow2.active i#arrowdown1 {
+    display: block;
+}
+
+.toggleArrow2.active i#arrowup1 {
+    display: none;
+}
+
+
+
+
+.toggleArrow3 {
+    position: relative;
+    width: 40px;
+    height: 30px;
+    background-color: var(--side-bar);
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-white3);
+    cursor: pointer;
+}
+
+.toggleArrow3.active {
+    background-color: var(--color-icons);
+    
+}
+
+.toggleArrow3 i{
+    position: absolute;
+    display: none;
+    transition: 1s;
+}
+
+.toggleArrow3 i#arrowup2,
+.toggleArrow3.active i#arrowdown2{
+    display: block;
+}
+
+.toggleArrow3.active i#arrowup2 {
+    display: none;
+}
+
+.toggleArrow4 {
+    position: relative;
+    width: 40px;
+    height: 30px;
+    border-radius: 1rem;
+    background-color: var(--side-bar);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-white3);
+}
+
+.toggleArrow4 i{
+    position: absolute;
+    display: none;
+    transition: 1s;
+}
+
+.toggleArrow4.active {
+    background-color: var(--color-icons);
+    transition: 1s;
+}
+
+.toggleArrow4 i#arrowup3,
+.toggleArrow4.active i#arrowdown3{
+    display: block;
+}
+
+.toggleArrow4.active i#arrowup3{
+    display: none;
+}
+
+
+.toggleArrow5 {
+    position: relative;
+    width: 40px;
+    height: 30px;
+    background-color: var(--side-bar);
+    color: var(--color-white3);
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.toggleArrow5.active {
+    background-color: var(--color-icons);
+    transition: 1s;
+}
+
+.toggleArrow5 i {
+    position: absolute;
+    transition: 1s;
+    display: none;
+}
+
+.toggleArrow5 i#arrowup4,
+.toggleArrow5.active i#arrowdown4{
+    display: block;
+}
+
+.toggleArrow5.active i#arrowup4 {
+    display: none;
+}
+
+
+
+
+
+
+.container .container-box{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,22rem);
+    gap: 1rem;
+}
+
+.container .container-box .box { 
+    border-radius: .5rem;
+    border:var(--border);
+    box-shadow: var(--box-shadow);
+    padding-bottom: .5rem;
+    padding-left: .5rem;
+    padding-right: .5rem;
+}
+
+.container .container-box .box h2{
+    text-align: center;
+    margin: 2rem 0 ;
+    border-bottom: 2px solid var(--color-dish2);
+    text-transform: capitalize;
+}
+
+.box-content h3{
+    font-size: 1.5rem;
+    text-align: center;
+    
+}
+
+.box-content{
+    margin-top: .7rem;
+    list-style-type: none;
+    line-height: 2rem;
+    background-color: var(--color-dish2);
+    border-radius:1rem;
+    padding-top:1rem;
+    padding-left:1rem ;
+    transition: .5s;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    overflow-y: hidden;
+    box-sizing: initial;
+    transition: .15s;
+}
+
+.box-content-1 {
+    margin-top: .7rem;
+    list-style-type: none;
+    line-height: 2rem;
+    background-color: var(--color-dish2);
+    border-radius:1rem;
+    padding-top:1rem;
+    padding-left:1rem ;
+    transition: height .5s;
+    clip-path: polygon(0 0, 100% 0, 100% 15%, 0 0);
+    overflow-y: hidden;
+    box-sizing: initial;
+    transition: .15s;
+}
+
+.box-content-2{
+    margin-top: .7rem;
+    list-style-type: none;
+    line-height: 2rem;
+    background-color: var(--color-dish2);
+    border-radius: 1rem;
+    padding-top: 1rem;
+    padding-left: 1rem;
+    transition: .5s;
+    clip-path: polygon(0 0, 100% 0, 100% 15%, 0 0);
+    box-sizing: initial;
+    overflow-y: hidden;
+}
+
+.box-content-3{
+    margin-top: .7rem;
+    list-style-type: none;
+    padding-top: 1rem;
+    padding-left: 1rem;
+    box-sizing: initial;
+    clip-path: polygon(0 0, 100% 0, 100% 15%, 0 0);
+    background-color: var(--color-dish2);
+    transition:.15s ;
+    overflow-y: hidden;
+    line-height: 2rem;
+    border-radius: 1rem;
+    box-sizing: initial;
+}
+
+.box-content-4{
+    margin-top: .7rem;
+    list-style-type: none;
+    line-height: 2rem;
+    background-color: var(--color-dish2);
+    padding-top: 1rem;
+    padding-left: 1rem;
+    border-radius: 1rem;
+    box-sizing: initial;
+    clip-path: polygon(0 0, 100% 0, 100% 15%, 0 0);
+    transition: .5s;
+}
+
+.box-content-4.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+
+.box-content.active{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    
+}
+
+.box-content-1.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.box-content-2.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.box-content-3.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+
+
+.container .container-box .box .box-content li{
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--side-bar);
+}
+
+
+.lessonBtn{
+    position: relative;
+    margin-top: .7rem;
+    width: 40px;
+    height: 30px;
+    background-color: var(--side-bar);
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-left: 17rem;
+}
+
+.lessonBtn i {
+    color: var(--color-white3);
+}
+
+
+
+@media (max-width:912px){
+    .container {
+        margin:5rem auto;
+        width:800px ;
+        align-items: center;
+    }
+}
+
+@media (max-width:700px){
+    .container {
+        margin:5rem auto;
+        width: 400px;
+
+    }
+
+    .container h1{
+        font-size: 1.5rem;
+    }
+
+    .container h2{
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width:420px){
+    .container {
+       
+        margin:5rem auto;
+        width: 250px;
+    }
+
+    .container .container-box{
+        display: flex;
+        flex: wrap;
+        flex-direction: column;
+        }
+
+        .lessonBtn{
+            margin-left: 11rem;
+        }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

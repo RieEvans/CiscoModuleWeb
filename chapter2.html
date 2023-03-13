@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Side Bar </title>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./chapter2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    <section class="container-ch2">
+
+        <section class="sidebar">
+            <ul>
+                <li class="list active">
+                    <a href="index.html" class="textcon">
+                        <i class="fa-solid fa-house"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+    
+                <li class="list">
+                    <a href="chapter1.html" class="textcon">
+                        <i class="fa-solid fa-book"></i>
+                        <span>Chapter 1</span>
+                    </a>
+                </li>
+    
+                <li class="list">
+                    <a href="chapter2.html">
+                        <i class="fa-solid fa-book-open-reader"></i>
+                        <span>Chapter 2</span>
+                    </a>
+                </li>     
+     
+            </ul>
+        </section>
+
+        <div class="toggle">
+            <i class="fa-solid fa-xmark" id="close"></i>
+            <i class="fa-solid fa-arrow-up-right-from-square" id="open"></i>
+        </div>
+
+        <div class="ch2-container">
+
+            <div class="ch2-title">
+                <h1>Chapter 2: Network Access</h1>
+            </div>
+
+            <div class="ch2-content-bx">
+                <h2>Basic configuration of a new Cisco switch</h2>
+                <p>On this lesson, let's talk about the basic configuration of a new cisco switch. </p>
+            </div>
+
+            <div class="ch-flex-content">
+
+                <div class="flex-a">
+                    <h1>Before configuring a new cisco switch </h1>
+                </div>
+
+                <div class="flex-t">
+                    <p>Before we configure a switch, we should already have a plan laid out kung ano ang goal natin. Ibig sabihin, dapat bago palang tayo magsimula naka-ready na ang mga tools (software and hardware) 
+                        including the script na kailangan. 
+                        In networking as much as possible lahat ng activities ay naka plano na dapat.
+                    </p>
+                    <br>
+                    <p>
+                        In real world sa isang corporate, kadalasan ay merong existing process kung paano mag coconfigure ng switch. Kung mag papalit man o mag dadagdag, meron naring mga existing templates or script na sinusunod para sa organize, standarize at professional ang setup. 
+                    </p>
+                    <br>
+                    <p>
+                        Bago mag perform ng initial configuration, most of the time ina access ito via consolo port. So kelangan natin ng console cable. At terminal software gaya ng Putty or secure crt para maka login dito.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="stp-1">
+
+                <div class="stp1-title">
+                    <h2>1. Deleting old Vlan database (vlan.dat)</h2>
+                </div>
+
+                <div class="stp1-ctnt">
+
+                    <p>Ang vlan.dat ay ang VLAN database ng previous configuration. Kung dati ng ginamit ang switch or kahit brand new, it is needed to delete this vlan database to protect the existing configurations of the network.</p>
+                    <br>
+                    <p>Pwede kasing ma override ang existing configurations dahil sa lumang vlan database.</p>
+
+                    <div class="stp-sample">
+                        <p>switch# delete flash: vlan.dat</p>
+                    </div>
+
+                </div>
+                
+                
+            </div>
+
+            <div class="stp-1">
+
+                <div class="stp1-title">
+                    <h2>2. Deleting startup configuration.</h2>
+                </div>
+
+                <div class="stp1-ctnt">
+
+                    <p>Ang startup configurations ang naka-save ng configuration sa ating device. Once na i-delete natin ito babalik sa default state ng configurations. Same ito ng factory reset sa ibang device mga gadgets then after ma reboot use this command "reload"</p>
+                    
+                    <div class="stp-sample">
+                        <p>switch# write erase</p>
+                        <p>switch# reload</p>
+                        <p>or</p>
+                        <p>switch# clear start</p>
+                        <p>switch# reload</p>
+                        
+                    </div>
+
+                </div>
+                
+                
+            </div>
+
+
+            <div class="stp-1">
+
+                <div class="stp1-title">
+                    <h2>3. Setting the hostname</h2>
+                </div>
+
+                <div class="stp1-ctnt">
+
+                    <p>Ang hostname ang basic ID ng isang device. Ito ang nakikita natin "name" ng isang switch or router kapag nag-login tayo sa command line. Please take note na ang mga devices ay nagco-communicate through IP address at hindi through hostname. 
+                        Ang hostname para sa mga administrators.</p>
+                    
+                    <div class="stp-sample">
+                        <p>switch# configure terminal</p>
+                        <p>switch(config)# hostname NEW_SWITCH</p>
+                        <p>NEW_SWITCH(config)# exit</p>
+                        <p>NEW_SWITCH#</p>
+                        
+                    </div>
+
+                </div>
+                
+                
+            </div>
+
+            <div class="stp-1">
+
+                <div class="stp1-title">
+                    <h2>4. Setting Default Gateway</h2>
+                </div>
+
+                <div class="stp1-ctnt">
+
+                    <p>Ang default gateway ang magsisilbing daan palabas ng switch natin kung ang end device na naka-connect sa switch natin ay gustong makipag communicate sa ibang VLANs or network or sa internet . Sa mga simulators at maliliit na network, pwedeng ip address ito ng router. In real world, ip adress ito ng core or uplink switches or layer 3 device.</p>
+                    
+                    <div class="stp-sample">
+                        <p>NEW_SWITCH# configure terminal</p>
+                        <p>NEW_SWITCH(config)# ip default-gateway 10.160.224.1</p>
+                        
+                        
+                    </div>
+
+                </div>
+                
+                
+            </div>
+
+            <div class="stp-1">
+
+                <div class="stp1-title">
+                    <h2>5.Securing the logins</h2>
+                </div>
+
+                <div class="stp1-ctnt">
+
+                    <p>Ang pag sesecure ng login ang isa sa pinaka-importante task na kailangan natin gawin when setting configuration of a new cisco switch. Kelangan authorized users lamang ang mga may access at nakaka-login sa device natin.
+                        .</p>
+                    
+                    <div class="stp-sample">
+                        <p>NEW_SWITCH> enable</p>
+                        <p>NEW_SWTICH#</p>
+                        <p>NEW_SWITCH# configure terminal</p>
+                        <p>NEW_SWITCH(config)# enable secret class</p>
+                        <p>NEW_SWITCH(config)#line console 0 </p>
+                        <p>NEW_SWITCH(config-line)#exec-timeout 60 0 </p>
+                        <p>NEW_SWITCH(config-line)#login</p>
+                        <p>NEW_SWITCH(config-line)#password cisco123</p>
+                        <p>NEW_SWITCH(config-line)#line vty 0 4</p>
+                        <p>NEW_SWITCH(config-line)#exec-timeout 60 0</p>
+                        <p>NEW_SWITCH(config-line)#login </p>
+                        <p>NEW_SWITCH(config-line)#password cisco123</p>
+                        <p>NEW_SWITCH(config-line)#exit</p>
+                        <p>NEW_SWITCH(config)#service password-encryption</p>
+                        
+                        
+                        
+                    </div>
+
+                </div>
+                
+                
+            </div>
+
+
+            <div class="vlan-cont">
+
+                <div class="vlan-title">
+                    <h1>Understanding VLAN</h1>
+                </div>
+
+                <div class="img-cont">
+                    <div class="image"><img src="/image/vlan.png" alt=""></div>
+
+                </div>
+                
+                <div class="popup-image">
+                    <span>&times;</span>
+                    <img src="image/vlan.png" alt="">
+                </div>
+
+                <div class="vlan-cntn">
+                    <p>A VLAN is a group of device on one or more LANs that are configured to communicate as if they were attched to the same wire, when in fact they are located on a number of different LAN segments. Because VLANs are based on logical instead of physical connections, they are extremely flexible.</p>
+                    <br>
+                    <p>Ang ginagawa ni VLAN is sineseparate niya ang mga computer to have a different LAN para mag karoon ng security.
+                        Katulad ng example image sa taas, hindi pwede magkaroon ng communication ang computer from sales department to HR deparment ganun rin sa accounting deparment an so on.</p>
+                </div>
+
+                <div class="img-cont2">
+                    <div class="image2"><img src="image/vlan-sample.png" alt=""></div>
+                </div>
+
+                <div class="pop2">
+                    <span>&times;</span>
+                    <img src="image/vlan-sample.png" alt="">
+                </div>
+
+                <div class="vlan-cntn">
+                    <p>As you can see they are different vlans. Ibig sabihin, ang vlan ay nagre-represent lamang ng isang subnet or maliit na network. But take note hindi kailangan na physically connected sila to be in same vlan. Pwedeng sila ay virtually connected kaya tinawag na (virtual lan).</p>
+                </div>
+
+
+
+            </div>
+
+
+            <div class="stp-ctnt">
+
+                <div class="stp-title">
+                    <h1>Spanning-tree Protocol</h1>
+                    
+                </div>
+
+                <div class="stp-text">
+                    <p>Ang STP ay isang switching method technology na ginagamit para ma-prevent ang loops sa isang network. Loops also know "802.1D" protocol.</p>
+                </div>
+
+                <div class="stp-title">
+                    <h1>Why we need STP ? </h1>
+                </div>
+
+                <div class="stp-text">
+                    <p>Para mag karoon ng backup incase na mag down ang isang server tinatawag ito na redundancy. Mas malaki ang damage na mangyayari kapag walang redundancy sa isang network.</p>
+                </div>
+
+                <div class="img-cont3">
+                    <div class="image3"><img src="image/stp.png" alt=""></div>
+                </div>
+
+                <div class="pop3">
+                    <span>&times;</span>
+                    <img src="image/stp.png" alt="">
+                </div>
+
+                <div class="stp-text">
+                    <p>As you can see in our demonstration above, meron tayong redundancy, Meron na tayong two path or two ways para marating or maka-connect sa Server from the "user" or pc side. </p>
+                    <br>
+                    <p>From switch A pwedeng dumaan kay switch B or pwede kay switch C. Kung mag down or in case mag ka problem ang path from switch A to B, makaka connect parin tayo via Switch C. 
+                        kung si path naman ni Switch C ang may problema, makaka connect pa rin tayo sa server side via Switch B. 
+                        That how redundancy works. </p>
+                </div>
+
+
+            </div>
+
+
+            <div class="etherchannel">
+                <div class="ether-title">
+                    <h1>Etherchannel</h1>
+                </div>
+
+                <div class="eth-text">
+                    <p>Ang etherchannel ay ang proseso ng pag bubundle or pag-group ng mga physical interfaces ng isang switch to act like this one. Meaning, kapag nag Etherchannel tayo ng 4 interfaces sa isang swtich, it will be considered as 1 port only. 
+                        1 group of ports to be exact pero in reality. 4 ports ang nasa loob ng naturang port-channel or Etherchannel. </p>
+                </div>
+
+                <div class="img-cont4">
+                    <div class="image4"><img src="image/etherchannel.png" alt=""></div>
+
+                </div>
+
+                <div class="pop4">
+                    <span>&times;</span>
+                    <img src="image/etherchannel.png" alt="">
+                </div>
+
+                <div class="eth-text">
+                    <p>In our sample image sa taas, meron tayong tag-apat na physical ports na naka-bundle or naka-Etherchannel. Although we have 4 physical ports used, ito ay nakikita lamang as 1 logical link or connection, ito ay magiging port channel 1 sa side ng parehong switches. </p>
+
+                </div>
+
+                <div class="ether-title">
+                    <h1>Para saan ang Etherchannel </h1>
+                </div>
+
+                <div class="eth-text">
+                    <p>Maraming dahilan at kanya kanyang reason ang pag gamit nito. Pwedeng dahil nag titipid dahil no need na bumili ng high capacity port na switches or devices or pwede rin redundancy para in case mag down ang isang port meron pa rin connection going to other device or in general ginagamit ito para ma-extend ang capacity ng mga ports or interfaces.</p>
+                </div>
+
+                <div class="img-cont5">
+                    <div class="image"><img src="image/ethdemo.png" alt=""></div>
+                </div>
+
+                <div class="pop5">
+                    <span>&times;</span>
+                    <img src="image/ethdemo.png" alt="">
+                </div>
+
+
+            </div>
+
+
+
+        </div>
+
+    </section>
+    
+
+    <script src="chapter2.js"></script>
+    
+</body>
+</html>

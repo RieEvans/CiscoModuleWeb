@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Side Bar </title>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./chapter1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    <section class="container-ch1">
+
+        <section class="sidebar">
+            <ul>
+                <li class="list active">
+                    <a href="index.html" class="textcon">
+                        <i class="fa-solid fa-house"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+    
+                <li class="list">
+                    <a href="chapter1.html" class="textcon">
+                        <i class="fa-solid fa-book"></i>
+                        <span>Chapter 1</span>
+                    </a>
+                </li>
+    
+                <li class="list">
+                    <a href="chapter2.html">
+                        <i class="fa-solid fa-book-open-reader"></i>
+                        <span>Chapter 2</span>
+                    </a>
+                </li>     
+     
+            </ul>
+        </section>
+
+        <div class="toggle">
+            <i class="fa-solid fa-xmark" id="close"></i>
+            <i class="fa-solid fa-arrow-up-right-from-square" id="open"></i>
+        </div>
+
+        <div class="cb-ch1">
+
+            <div class="title-bar">
+                <h1>Introduction to</h1>
+                <span>Network Fundamentals</span>
+            </div>
+
+            
+
+            <div class="chapter1-content">
+                <div class="content-title">
+                    <h2>Lesson 1: What is a network and how it works ?</h2>
+                </div>
+                
+                <div class="ch1-content-box">
+
+                    <p>In the technology world, ang network (Computer Networking) ay combination or grupo ng mga computers
+                        at devices connected together na nakaka pag communicate sa bawat isa. Nagkikita kita at "Nakakapag usap" sila
+                        sa pamamagitan ng mga network connections standards and protocols. Ibig sabihin, pwede silang mag share ng mga Data,
+                        Resources at services to each other. <br><br>
+                        It's like a system kung saan ang mga compononents ay mag kakaugnay at makaka konekta in order to share 
+                        information. <br><br>
+                        Think of it as a Nervous System: 
+                    </p>
+                </div>
+                
+
+
+            </div>
+
+        </div>
+
+
+        <div class="ns-container">
+
+            <div class="ns-content">
+                <p>- Our Nervous system has a different components or body parts to make the whole nervous system works</p><br><br>
+                <p>- In Computer Networks ganun din: </p><br>
+                <p>- Ang mga components (Devices, Cables, Protocols) ay may Kanya-kanyang functions to make the whole 'Network' Works</p><br>
+                <p>- In a Large Scale Ang network ay binubuo ng mga devices (Like Computers, Printers, Smart Phone, Swtich, Router etc) 
+                    connected via network cable or wireless on a set of network protocols like IP Address, routing protocols and more.
+                </p>
+            </div>
+
+            <img src="image/nervous system.png" class="ns-image">
+           
+
+        </div>
+
+        <div class="cb-lesson2">
+
+            <div class="lesson2-title">
+                <h2>Lesson 2: Network Components</h2>
+            </div> 
+
+            <div class="ls2-content">
+                <p>Para mas maunawaan pa natin kung paano talaga gumagana ang network, let's take a look sa mga components na bumubuo dito.
+                    <br>As I shared in the beggining, a network is like a system (atleast 2 or more devices)
+                        ba binubuo ng ibat ibang components.            
+                 </p>
+
+                 <div class="ls2-endpoint-box">
+                    <h3>End Point Devices</h3>
+                 </div>
+
+                 <p>Ang mga End Point Devices ito ang mga actual devices na ginagamit ng users like Laptops, Mobile Phone, Computers, Tablets, Servers, IP Camera and more 
+                    It's mostly connected sa ating network swtiches (access points) para maging part ng ating network.
+                 </p>
+
+                 <div class="ls2-endpoint-box">
+                    <h3>Media/Interconnections</h3>
+                 </div>
+
+                 <p>Ito naman yung mga cables, wires and wireless or anything that connects to our 'End Devices' to our network devices.
+                    <br>For Example, a copper cable connecting a desktop to our network switch, coaxial cable connecting to our network switch
+                    <br> or di kaya naman, a wireless interface card connecting out smart phones, tablets, and laptops to our access point 
+                        (which is also connected to our network switch via network cable). Our connecting our switch to our router.
+                        <br>kumbaga, they 'bridge' to connect the devices in our network at maging part ng ating network. 
+                 </p>
+
+                 <div class="ls2-endpoint-box">
+                    <h3>Network Devices</h3>
+                 </div>
+
+                 <P>Ang mga network devices naman, gaya ng switch at routers nating ang tumutulong upang mag kita kita at maka pag usap ang ating mga 'end devices' pati narin ang network devices
+                    within our network. Ang mga network devices ang may kakayanan to help us "communicate" or "deliver/transfer" data back and forth sa ating network.
+                    <br>For Example: <br>
+                    The Switch knows where to deliver the "Frames" using mac address of the devices. The router knows how to get to a certain device (or destination) using "IP Address".                
+                 </P>
+
+                 <img src="image/network devices.png" class="nd-img">
+
+                 <p>ang mga components na ito ang bumubuo sa ating network. They are all part of the whole network and each of them has their own functions.</p>
+
+            </div>
+
+        </div>
+
+        <div class="cb-lesson3">
+
+            <div class="ls3-title">
+                <h2>Lesson 3: Common Network Devices </h2>
+            </div>
+
+            <div class="ls3-content-box">
+                <img src="image/hub.png" class="hub" >
+
+                <div class="hub-box">
+                    <p>Ang mga hubs ay sinaunang networking devices nag nagsisilbing "Central Point" kung saan ang mga hosts or devices ay naka connect. Ito ay nag ooperate sa Layer 1 ng OSI Model. 
+                        sa panahon ngayon bihira na or (wala na) ang gumagamit ng mga hubs lalo na sa malalaking companies. 
+                    </p>
+                    <Br>
+                    <p>Maituturing na rin itong obsolete dahil may mga mas bago at advance networking devices na lumabas. Tinatawag din Multi-Port repeater ang mga hub.</p>
+                </div>
+
+                
+
+            </div>
+
+            <div class="hub-box-works">
+
+                <div class="ls3-title">
+                    <h3>How Hub Works : </h3>
+                </div>
+
+                <div class="how-box">
+                    <p>Ang Hub ay nag sisilbing central point kung saan ang mga hosts or end devices ay nag naka-connect. Sahibin natin na ang isang hub ay naka connect sa router mula
+                        sa ating ISP, then ang mga PC at iba pang devices ay naka connect naman sa hub. Ang mga hubs "Ay hindi nag proprocess or nag aanalyze ng mga traffic" at ipapadala 
+                        lamang nito ang lahat ng traffic sa LAHAT ng ports nito maliban sa source port. ibig sabihin, lahat ng devices na naka connect sa hub ay makaka receive ng "traffic" 
+                        or signal kahit hindi naman ito para sa kaniya. 
+                    </p>
+                    <li>Ang Hub ay ang ooperate lamang as "Half Duplex" means hindi pwedeng sabay mag send at mag receive ng traffic ang isang device.</li>
+                    <li>Isa pang disadvantage nito ay meron lamang itong isang Collision Domain. </li>
+
+                    <li><span>Collision Domain</span> ay isang grupo ng mga devices kung saan pwedeng mag collide or mag-rumble ang mga frames or traffic. Ang hub ay isang malaking collision domain at lahat
+                    ng devices na naka connect dito ay member ng naturang collision domain.</li>
+                </div>
+
+                
+            </div>
+
+            <div class="ls3-title">
+                <h3>Switch : </h3>
+            </div>
+
+            <div class="ls3-content-box">
+                <img src="image/switch.png" class="hub" >
+
+                <div class="hub-box">
+                    <p>Kagaya ng hubs, ang mga switches ay ginagamit din upang maka connect ng iba't ibang end devices karaniwan itong ginagamit upang
+                        ma distribute ang local area connection sa mga devices. 
+                    </p>
+
+                    <li>Ang switch ay nag ooperate sa layer 2 ng OSI Model. </li>
+                    <li>May kakayahan ang switch na mag analyze ng traffic at gumawa ng intelligent decision, kung saan alam niya kung saan ito padadala.</li>
+
+                    
+                </div>
+                
+                
+            </div>  
+
+            <div class="switch-box">
+                <p>Ang kagandahan sa mga switches ay "Bawat port nito ay isang collison domain lamang." Kung ang hub ay malaking collision domain at bawat devices na nakaconnect dito ay memeber ng collision domain,
+                    iba naman ito sa mga switches.
+                </p>
+                <br>
+                <p>Pag dating sa Switch, bawat port or Interface ay isa lamang collision domain. Ibig sabihin, kung meron kang 48 ports meron kang ding 48 collision domain
+                    dahil dito naalis ang posibilidad na mag karoon ng collision. 
+                </p>
+                <br> <br>
+                <li>HUB = 1 Collision Domain</li>
+                <li>Switch = 1 Port = 1 Collision Domain</li>
+                
+                <li>Switch is also a broadcast domain no matter how many ports. </li> <br>
+                <p><span>Broadcast Domain</span>
+                    Ang broadcast domain naman ay grupo ng mga devices na pwede maka receive ng broadcast. Ito ay proseso ng pag papadala ng switch or traffic sa lahat ng member ng broadcast domain nito 
+                    or sa lahat ng kanyang ports to send/receive update or information.
+                </p>
+                <br>
+                <li>Switch also operate as full Duplex.</li>
+                
+            </div>
+
+            <div class="switch-box-works">
+                <div class="ls3-title">
+                    <h3>How switches works in Networking:</h3>
+                </div>
+
+                <img src="image/switch-work.png" alt="">
+
+                <div class="sw-box-works">
+                    <p>Sa sample image natin sa taas, ipinapakita ang basic function ng isang switch.</p>
+
+                    <li>Let say si PC A ay gustong makipag communicate kay PC B, so mag sesend siya ng request</li>
+                    <li>When the frame arrives at the switch, the switch will look at the destination mac-address (mac address ni PC B)</li>
+                    <li>ise-search ni switch sa kanyang mac-address table kung saan ang port ni PC B</li>
+
+                    <span>What is MAC-ADDRESS table ?</span>
+                    <p>Ang mac address table ay isang listahan ni switch ng lahat ng mac-address na connected sa kanyang mga ports
+                        Ginagamit ito ni switch sa pag dedesisyon kung saan niya ipapadala or ifoforward ang frames or traffic.
+                    </p>
+
+                    <p>Bawat Mac address na nag sesend ng frames kay switch ay inililista sa kanyang mac address table para matandaan niya ito. </p>
+                    
+                </div>
+
+
+            </div>
+
+            <div class="ls3-title">
+                <h3>Router </h3>
+            </div>
+
+            <div class="router-box">
+                <img src="image/routerpng.png" alt="">
+            </div>
+
+            <div class="router-content">
+
+                <div class="rtr-def">
+
+                    <div class="rtr-def1">
+                        <li>Ang router ay isang networking device na nag ooperate sa "Layer 3 ng OSI Model" (Internet Layer ni TCP/IP).</li><br>
+                        <li>Meron din itong capability na mag analyze at mag filter ng traffic using IP Addresses. </li><br>
+                        <li>Dito binebase ng router ang decision nila papano nila ipapadala ang packets from source network to the destination network.</li>
+                    </div>
+                    
+
+                    <div class="rtr-def2">
+                        <p>Kung ang isang switch ay isang malaking bradcast domain, sinesegregate naman ng router ang broadcast domain dahil ang isang PORT or INTERFACE 
+                            nito ang siya lamang member ng naturang broadcast domain. Ibig sabihin, isang port ng ng router ang pwedeng maka-receive ng broadcast galing sa switch.
+                        </p>
+                    </div>
+                    
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="cb-lesson4">
+
+            <div class="ls4-title">
+                <h2>Lesson 4: Layers of TCP/IP and OSI Model</h2>
+                
+            </div>
+
+    
+
+            <div class="ls4-content-accordion">
+
+                <h2>OSI Model</h2>
+
+                <li>
+                    <input type="radio" name="accordion" id="first" checked>
+                    <label for="first">Application</label>
+                        <div class="app-content">
+                            <p>Where application and user communicates</p>
+                        </div>
+                </li>
+
+                <li>
+                    <input type="radio" name="accordion" id="second" checked>
+                    <label for="second">Presentation</label>
+                        <div class="app-content">
+                            <p>Responsible for data formatting that is used to encrypt and decrypt the data.</p>
+                        </div>
+                </li>
+
+                <li>
+                    <input type="radio" name="accordion" id="third" checked>
+                    <label for="third">Session</label>
+                        <div class="app-content">
+                            <p>Responsible to start and stop the session.</p>
+                        </div>
+                </li>
+
+                <li>
+                    <input type="radio" name="accordion" id="fourth" checked>
+                    <label for="fourth">Transport</label>
+                        <div class="app-content">
+                            <p>Determines what port to be used Ex. TCP/UDP & Other ports</p>
+                        </div>
+                </li>
+
+                <li>
+                    <input type="radio" name="accordion" id="fifth" checked>
+                    <label for="fifth">Network</label>
+                        <div class="app-content">
+                            <p>Responsible for data formatting that is used to encrypt and decrypt the data.</p>
+                        </div>
+                </li>
+
+                <li>
+                    <input type="radio" name="accordion" id="sixth" checked>
+                    <label for="sixth">Data-link</label>
+                        <div class="app-content">
+                            <p>More information added to the data such as MAC Address.</p>
+                        </div>
+                </li>
+
+                <li>
+                    <input type="radio" name="accordion" id="seventh" checked>
+                    <label for="seventh">Physical</label>
+                        <div class="app-content">
+                            <p>Carry data through Physical Hardware.</p>
+                        </div>
+                </li>
+
+
+
+
+            </div>
+
+            
+            <div class="ls4-title">
+                <h2>TCP vs. UDP </h2>
+                
+            </div>
+
+            <div class="tcp-content">
+
+                <div class="tcp-box">
+                    <h1>TCP</h1>
+                    <li>TCP (Transmission Control Protocol) and UDP (User Datagram Protocol) are always included kapag pinag usapan natin ang transport layer.</li>
+                    <li>When it comes to TCP, we need to have a reliable connection. That means, we need to have a confirmation from both ends (sender and receiver)  bago magsimula or mangyari yung communication</li>
+                    <li>Dito papasok ang 3 way Handshake</li>
+                    <li>Ang 3 way Handshake process ay isang proseso kung saan ....
+                        nag papadala ng "syn" packet ang sender papunta sa receiver, kapag ito ay natanggap,</li>
+                    <li>the receiving device needs to send other packet called "syn-ack". meaning the initial syn packet has being acknowledged. </li>
+                    <li>Once its done, the sending device will send another packet called "ack"  </li>
+                    
+                    
+                </div>
+
+                <img src="image/3wayhs.png" alt="" class="imghs">
+
+
+            </div>
+
+            <div class="udp-content">
+
+                <div class="udp-box">
+                    <h1>UDP</h1>
+                    <p>Si UDP wala itong re-transmission packets, wala rin itong recovery of packets. Kung naputol ang connection, it doesn't have a recovery packets for those loss. It just continue its communcation or connection.</p>
+                    <h2>Example: </h2>
+                    <li>Watching Live streaming</li>
+                    <li>Playing online games</li>
+
+
+                </div>
+
+                <img src="image/udphs.png" alt="" class="udpimg">
+
+            </div>
+
+
+        </div>
+
+
+        <div class="cb-lesson5">
+
+            <div class="ls5-title">
+                <h1>Lesson 5: IP Addressing</h1>
+            </div>
+
+            <div class="address-content">
+
+                <div class="mahogany">
+                    <img src="image/mahogany.png" alt="" class="imgmahogany">
+                </div>
+
+                <div class="ipaddress-img">
+                    <img src="image/ipimg.png" alt="" class="imgip">
+                </div>
+
+                
+                
+            </div>
+
+            <div class="textipcp">
+                <p>Sa isang neighborhood merong house number katulad rin ni computer para ma identify kung saang specific address maipapadala or mang gagaling ang data pag nakipag communicate. Ang palagi nag babago pag nag assign ng ip address sa DHCP server is the last octets. 
+                </p>
+                <li>OCTETS ang tawag pag hinati hati ang IP Address.</li>
+                <li>per group (before the period) is octet </li>
+                <li>per octets == 8 bits in binary </li>
+                <li>ang IP address ay binubuo ng 32 bits, meaning kung icoconvert ang ip address into 1s and 0s it is composed of 32 pieces of 0s and 1s. </li>
+            </div>
+
+
+        </div>
+
+        <div class="autoarrow">
+            <i class="fa-solid fa-angles-up"></i>
+        </div>
+
+        
+    </section>
+
+
+    
+    
+    <script src="chapter1.js"></script>
+    
+</body>
+</html>
