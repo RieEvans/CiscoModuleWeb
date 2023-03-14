@@ -402,6 +402,33 @@ body {
 
 
 
+.touparrow {
+    position: fixed;
+    bottom: 0;   
+    right: 0;
+    background-color: var(--side-bar);
+    height: 40px;
+    width: 50px;
+    cursor: pointer;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.touparrow i {
+    font-size: 1.5rem;
+    color: var(--text-color);
+}
+
+html {
+    scroll-behavior: smooth;
+    
+}
+
+
+
 
 @media (max-width:850px){
     .container-ch2 {
